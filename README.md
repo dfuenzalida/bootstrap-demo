@@ -1,36 +1,23 @@
 # bootstrap-demo
 
-FIXME: description
+A demo of using a Ring based application to serve resources from WebJars and a front-end UI written with Reagent and Bootstrap to demonstrate using the Bootstrap JS APIs.
 
-## Installation
-
-Download from http://example.com/FIXME.
 
 ## Usage
 
-FIXME: explanation
+Compile the JavaScript assets with
 
-    $ java -jar bootstrap-demo-0.1.0-standalone.jar [args]
+    $ lein cljsbuild once
 
-## Options
+Then run the server with
 
-FIXME: listing of options this app accepts.
+    $ lein run
 
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+Now connect to http://0.0.0.0:3000/index.html to view the application.
 
 ## License
 
-Copyright © 2019 FIXME
+Copyright © 2019 Denis Fuenzalida
 
 This program and the accompanying materials are made available under the
 terms of the Eclipse Public License 2.0 which is available at

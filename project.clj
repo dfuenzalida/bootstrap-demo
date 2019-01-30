@@ -11,11 +11,23 @@
 
                  ;; resources
                  [org.webjars/bootstrap "3.4.0"]
-                 [cljsjs/bootstrap "3.3.6-1"]
+                 [org.webjars/jquery "3.3.1-1"]
 
                  ;; front-end
                  [org.clojure/clojurescript "1.10.439"]
+                 [cljsjs/bootstrap "3.3.6-1"]
+                 [cljsjs/jquery "3.2.1-0"]
                  [reagent "0.8.1"]]
+  :plugins [[lein-cljsbuild "1.1.7"]]
   :main ^:skip-aot bootstrap-demo.core
   :target-path "target/%s"
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}}
+  :cljsbuild {
+    :builds [{
+        :source-paths ["src-cljs"]
+        :compiler {
+          :output-to "resources/public/js/app.js"
+          :optimizations :whitespace
+          :pretty-print true}}]}
+
+  )
